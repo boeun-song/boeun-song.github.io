@@ -1,0 +1,81 @@
+import type { MonthlyPayPromotionList } from "~apps/components/charts/PayPromotionChart";
+
+export const payPromotionMocks: MonthlyPayPromotionList[] = [
+  {
+    activated: true,
+    postingBeginAt: new Date("2025-06-02"),
+    postingEndAt: new Date("2025-06-10"),
+    promotionId: 0,
+    title: "Card Promotion: June Blast",
+  },
+  {
+    activated: true,
+    postingBeginAt: new Date("2025-06-15"),
+    postingEndAt: new Date("2025-06-26"),
+    promotionId: 1,
+    title: "Summer Payment Cashback_1",
+  },
+  {
+    activated: true,
+    postingBeginAt: new Date("2025-06-20"),
+    postingEndAt: new Date("2025-06-25"),
+    promotionId: 1,
+    title: "Summer Payment Cashback_2",
+  },
+  {
+    activated: true,
+    postingBeginAt: new Date("2025-06-05"),
+    postingEndAt: new Date("2025-06-15"),
+    promotionId: 1,
+    title: "Summer Payment Cashback_3",
+  },
+  {
+    activated: true,
+    postingBeginAt: new Date("2025-05-15"),
+    postingEndAt: new Date("2025-06-27"),
+    promotionId: 2,
+    title: "Summer Payment Cashback_2",
+  },
+  {
+    activated: false,
+    postingBeginAt: new Date("2025-05-10"),
+    postingEndAt: new Date("2025-05-30"),
+    promotionId: 3,
+    title: "Spring Early Bird Discount",
+  },
+  {
+    activated: false,
+    postingBeginAt: new Date("2025-04-20"),
+    postingEndAt: new Date("2025-06-05"),
+    promotionId: 4,
+    title: "Cardholder Loyalty Offer",
+  },
+  {
+    activated: true,
+    postingBeginAt: new Date("2025-07-01"),
+    postingEndAt: new Date("2025-07-10"),
+    promotionId: 5,
+    title: "Mid-Year Bonus Program",
+  },
+  {
+    activated: true,
+    postingBeginAt: new Date("2025-08-05"),
+    postingEndAt: new Date("2025-08-20"),
+    promotionId: 6,
+    title: "Back-to-School Rewards",
+  },
+  {
+    activated: false,
+    postingBeginAt: new Date("2025-06-01"),
+    postingEndAt: null,
+    promotionId: 7,
+    title: "Spending Bonus",
+  },
+  {
+    activated: true,
+    postingBeginAt: new Date("2025-6-10"),
+    postingEndAt: new Date("2025-6-30"),
+    promotionId: 8,
+    title: "Special Offer",
+  },
+];
