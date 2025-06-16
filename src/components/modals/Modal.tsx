@@ -30,7 +30,7 @@ export const Modal = ({ children, onClose }: PropsWithChildren<Props>) => {
           <div className="px-10 py-5 flex gap-3 justify-end sticky bg-white bottom-0 shrink-0 z-10">
             <button
               onClick={onClose}
-              className="px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 text-sm"
+              className="px-4 py-2 hover:bg-gray-200 text-[16px]"
             >
               Close
             </button>

@@ -1,4 +1,4 @@
-const contactClass = "font-semibold text-m text-green-900 hover:text-green-700";
+const contactClass = "font-semibold text-m text-black-500 hover:text-green-900";
 
 export const ContactSection = () => {
   return (

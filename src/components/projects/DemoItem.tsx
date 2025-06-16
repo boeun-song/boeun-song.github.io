@@ -32,9 +32,13 @@ export const DemoItem = ({ item }: { item: DemoItemType }) => {
         />
       )}
       {item.type === "component" && item.component}
-      <p className="text-base text-gray-800 font-medium max-w-3xl whitespace-pre-line text-left">
-        {item.description}
-      </p>
+      {typeof item.description === "string" ? (
+        <p className="text-base text-gray-800 font-medium max-w-3xl whitespace-pre-line text-left">
+          {item.description}
+        </p>
+      ) : (
+        item.description
+      )}
     </div>
   );
 };

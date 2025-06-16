@@ -27,7 +27,6 @@ export const InputBox = React.forwardRef<HTMLInputElement, Props>(
       hint,
       placeholder,
       leftComponent,
-
       rightComponent,
       hasError,
       disabled,
