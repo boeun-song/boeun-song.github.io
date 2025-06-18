@@ -33,7 +33,7 @@ export const DemoItem = ({ item }: { item: DemoItemType }) => {
       )}
       {item.type === "component" && item.component}
       {typeof item.description === "string" ? (
-        <p className="text-base text-gray-800 font-medium max-w-3xl whitespace-pre-line text-left">
+        <p className="description">
           {item.description}
         </p>
       ) : (

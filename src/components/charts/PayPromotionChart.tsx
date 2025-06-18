@@ -7,7 +7,7 @@ import {
   filterCurrentMonthPromotions,
   sortPromotions,
 } from "~apps/components/charts/PayPromotionChart.hooks";
-import type { SelectedDate } from "../calendar/MonthlyCalendar";
+import type { SelectedDate } from "~apps/components/calendar/MonthlyCalendar";
 import { useMemo } from "react";
 
 export interface MonthlyPayPromotionList {

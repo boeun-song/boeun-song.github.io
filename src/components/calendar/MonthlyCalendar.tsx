@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { InputBox } from "../forms/InputBox";
+import { InputBox } from "~apps/components/forms/InputBox";
 import { CalendarIcon } from "~apps/assets/icons/CalendarIcon";
 
 export interface SelectedDate {

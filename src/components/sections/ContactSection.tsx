@@ -1,10 +1,12 @@
+import { StickyTitle } from "~apps/components/layouts/StickyTitle";
+
 const contactClass = "font-semibold text-m text-black-500 hover:text-green-900";
 
 export const ContactSection = () => {
   return (
-    <div className="pb-20 text-center">
-      <h2 className="text-2xl font-bold mb-10">📬 Contact</h2>
-      <p>
+    <section className="pb-50 text-center">
+      <StickyTitle title="Contacts" />
+      <div className="flex flex-col pt-20">
         <a
           href="mailto:boeunsong05@gmail.com"
           className={contactClass}
@@ -12,8 +14,6 @@ export const ContactSection = () => {
         >
           📧 boeunsong05@gmail.com
         </a>
-      </p>
-      <p>
         <a
           href="https://www.linkedin.com/in/boeun-song-8622a61a3"
           className={contactClass}
@@ -21,8 +21,6 @@ export const ContactSection = () => {
         >
           💼 https://www.linkedin.com/in/boeun-song
         </a>
-      </p>
-      <p>
         <a
           href="https://github.com/boeun-song"
           className={contactClass}
@@ -30,7 +28,7 @@ export const ContactSection = () => {
         >
           👨‍💻 https://github.com/boeun-song
         </a>
-      </p>
-    </div>
+      </div>
+    </section>
   );
 };

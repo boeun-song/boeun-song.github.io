@@ -26,7 +26,7 @@ export const HeroSection = () => {
         streamline checkout conversion, accelerate page performance, unify
         analytics, and deliver robust admin tools.
         <br />
-        Earlier at TestWorks, I developed front-end modules for AI-powered image
+        Earlier at TestWorks -AI company, I developed front-end modules for AI-powered image
         and video data collection and maintained the corporate website.
         <br />
         <br /> Known for a strong sense of ownership, I consistently deliver

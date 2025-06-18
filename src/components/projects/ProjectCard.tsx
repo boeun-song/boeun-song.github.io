@@ -63,7 +63,7 @@ export const ProjectCard = ({
       <h2 className="text-xl font-semibold text-gray-900 m-4">
         {project.title}
       </h2>
-      <p className="text-sm text-gray-700 line-clamp-3">
+      <p className="text-sm text-gray-600 line-clamp-3">
         {project.description}
       </p>
     </motion.div>

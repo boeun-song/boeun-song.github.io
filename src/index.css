@@ -39,3 +39,13 @@
   }
 
 }
+
+@layer components {
+  .sub-title {
+    @apply font-bold text-[15px] text-left text-gray-400
+  }
+
+  .description{
+    @apply text-[16px] text-gray-700 leading-relaxed max-w-3xl mx-auto whitespace-pre-line text-left
+  }
+}

@@ -14,6 +14,7 @@ export interface DemoItem {
 export interface Project {
   title: string;
   demo?: DemoItem[];
+  impacts?: string | ReactNode;
   description: string;
   previews: string[];
   tech: string[];
@@ -22,6 +23,20 @@ export interface Project {
 export const projects: Project[] = [
   {
     title: "Cart Page",
+    impacts: (
+      <>
+        Implemented coupon application and a “Lowest Price with Coupon” toggle
+        on the cart page, greatly enhancing user convenience and purchase
+        conversion rates
+        <br />
+        <span className="text-blue-600 font-bold text-[13px]">
+          Cart Visit → Cart-to-Checkout Conversion 1-day: 26.9% → 28% [+111
+          bps];
+          <br />
+          GGMV: 7,243,265,929 → 7,818,556,782 [+7.94%]
+        </span>
+      </>
+    ),
     demo: [
       {
         type: "video",
@@ -39,14 +54,14 @@ export const projects: Project[] = [
       },
       {
         type: "video",
-        src: "/assets/cart/checkout.mp4",
+        src: "/assets/cart/select_download.mp4",
         description:
           "Even if users don’t own certain coupons, they can preview optimal combinations and download them instantly. When multiple items are selected,the cart suggests the best-discount combination across eligible products.",
         size: "sm",
       },
       {
         type: "video",
-        src: "/assets/cart/select_download.mp4",
+        src: "/assets/cart/checkout.mp4",
         description:
           "If a user selects a product and proceeds to checkout without having the optimal coupon, it is automatically downloaded and applied — ensuring the best price without any manual steps",
         size: "sm",
@@ -71,7 +86,7 @@ export const projects: Project[] = [
         src: "/assets/admin/admin_diagram.webp",
         description: (
           <div className="mt-10 flex flex-col gap-10">
-            <div>
+            <div className="text-left">
               <h4 className="font-bold">Option & Inventory Management</h4>
               <p className="mt-2">
                 A complex multi-row table lets admins select products and their
@@ -85,7 +100,7 @@ export const projects: Project[] = [
                 unsaved‐changes alert prevents accidental data loss.
               </p>
             </div>
-            <div>
+            <div className="text-left">
               <h4 className="font-bold">Product Management</h4>
               <p className="mt-2">
                 Implemented a performant table interface where admins and
@@ -98,7 +113,7 @@ export const projects: Project[] = [
                 clear status indicators for each product.
               </p>
             </div>
-            <div>
+            <div className="text-left">
               <h4 className="font-bold">
                 Product Registration (Partial contribution)
               </h4>
@@ -121,17 +136,19 @@ export const projects: Project[] = [
   {
     title: "Shared Component for Snowplow Event Tracking",
     description:
-      "Developed a wrapper component for tracking product-related view and click events.",
+      "Developed a wrapper component to track product-related view and click snowplow events with a unified criteria.",
+    impacts:
+      "Migrated event data from Firebase to Snowplow, set up a real-time analytics environment, and ensured data integrity to support effective decision-making",
     previews: ["/assets/event-track/event_track_preview.webp"],
     demo: [
       {
         type: "video",
         src: "/assets/event-track/event_track_demo.mp4",
         description: (
-          <ul className="mt-10 list-disc">
+          <ul className="mt-10 list-disc text-left">
             <li>
               <b>
-                Corporate with Ios, Android Developers to created a unified
+                Collaborated with Ios, Android Developers to created a unified
                 event tracking interface
               </b>
             </li>
@@ -172,24 +189,71 @@ export const projects: Project[] = [
   {
     title: "Angular-to-React Migration",
     description:
-      "My second iteration of a sleek, mobile-friendly developer portfolio.",
-    previews: ["https://source.unsplash.com/featured/?developer"],
+      "Migrated Angular to React with seven My Page sub-sections - Document Issuance, Membership Level, Coupons, Mileage, 1:1 Inquiries, Product Q&A, and Announcements",
+    impacts:
+      "Replacing the legacy codebase with React has dramatically simplified future feature work—team members can now extend My Page without wrestling with outdated Angular.",
+    previews: [
+      "/assets/angular-to-react/inquiry.webp",
+      // "/assets/angular-to-react/mileage.webp",
+      // "/assets/angular-to-react/my-coupons.webp",
+    ],
     tech: ["React", "Angular", "Styled Components", "TypeScript"],
+    demo: [
+      {
+        type: "image",
+        src: "/assets/angular-to-react/my-coupon.webp",
+        description: "",
+        size: 'sm'
+      },
+      {
+        type: "image",
+        src: "/assets/angular-to-react/mileage.webp",
+        description: "",
+        size: 'sm'
+      },
+      {
+        type: "image",
+        src: "/assets/angular-to-react/inquiry.webp",
+        description: (
+          <ul className="mt-10 list-disc text-left">
+            <li>
+              <b>Solo end-to-end delivery</b>: Without any designer or backend
+              support, I reverse-engineered the existing Angular logic,
+              documented every workflow in Notion, then re-implemented it in
+              React.
+            </li>
+            <li>
+              <b>Complex inquiry handling</b>: The 1:1 Inquiry page supports
+              multiple types (order inquiries—exchanges, returns, etc.—and
+              product questions). Also page have to display user's Order &
+              Shipping List for order inquiries. I audited each legacy case,
+              verified expected behaviors, and built robust components.
+            </li>
+            <li>
+              <b>QA & launch</b>: Led my own QA process, deployed the React
+              version, and rolled it out with zero critical issues.
+            </li>
+          </ul>
+        ),
+      },
+    ],
   },
   {
     title: "Pay Promotion Management - Admin",
     description:
-      "Administrators can manage, create, and edit payment promotions on the e-commerce platform",
+      "Improved the existing legacy payment benefits structure to build a system that aggregates payment benefits data in real time and tracks costs. also added a monthly calendar and date-based payment graphs to support profit management.",
+
     previews: ["/assets/admin/pay_promotion_preview.webp"],
     tech: ["React", "Styled Components", "TypeScript"],
+    impacts:
+      "With these changes, payment benefits data can be viewed and costs tracked instantly, and teams can monitor contribution profit day by day via the new calendar and graphs.",
     demo: [
       {
         type: "component",
         component: <PayPromotionSummarySection />,
         description: (
-          <>
+          <div className="text-left">
             <span className="text-gray-400 text-sm">* This is sample</span>
-            <h4 className="font-bold mt-2">Pay Promotion Management</h4>
             <p className="my-2">
               Date/Calendar Chart: an interactive timeline graph that displays
               each promotion’s start and end dates across the month, giving
@@ -201,7 +265,7 @@ export const projects: Project[] = [
             Users can also create and edit payment promotions via a form-based
             interface that adapts to different payment types and offer
             configurations.
-          </>
+          </div>
         ),
       },
     ],
