@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export const BlurBackground = () => {
   const scrollRef = useRef(null);
@@ -8,6 +8,7 @@ export const BlurBackground = () => {
     target: scrollRef,
     offset: ["start start", "end start"],
   });
+  const [isMobile, setIsMobile] = useState(false);
 
   const backgroundColor = useTransform(
     scrollYProgress,
@@ -21,6 +22,13 @@ export const BlurBackground = () => {
     ["blur(0px)", "blur(3px)"]
   );
 
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 768);
+  }, []);
+
+  if (isMobile) {
+    return null;
+  }
   return (
     <>
       <div

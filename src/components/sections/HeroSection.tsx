@@ -11,7 +11,7 @@ export const HeroSection = () => {
   });
   
   return (
-    <div className="px-20">
+    <div className="px-5 md:px-20">
       <h3 className="animate-typewriter text-4xl font-semibold text-gray-800 ">
         {text}
         {cursor && <Cursor />}

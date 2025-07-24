@@ -8,7 +8,7 @@ export const OthersSection = () => {
     <section>
       <StickyTitle title="Others" />
 
-      <ul className="space-y-8 px-20 py-20">
+      <ul className="space-y-8 p-5 md:p-20">
         {others.map((item) => (
           <li>
             <h3 className={titleClass}>{item.title}</h3>
