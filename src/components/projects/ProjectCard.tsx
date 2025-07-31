@@ -60,7 +60,7 @@ export const ProjectCard = ({
           );
         })}
       </div>
-      <h2 className="text-xl font-semibold text-gray-900 m-4">
+      <h2 className="text-l md:text-xl font-semibold text-gray-900 m-4">
         {project.title}
       </h2>
       <p className="text-sm text-gray-600 line-clamp-3">

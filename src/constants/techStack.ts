@@ -1,14 +1,13 @@
-type TechStack = "frontend" | "eventTracking" | "collaboration";
+type TechStack = "languagesAndFrameworks" | "styling" | "libraries" | "collaboration";
 
 export const techStack: Record<TechStack, string[]> = {
-  frontend: [
+  languagesAndFrameworks: [
     "React",
-    "TypeScript",
-    "JavaScript",
     "Next.js",
-    "Tailwind CSS",
-    "Styled Components",
+    "TypeScript",
+    "JavaScript (ES6+)",
   ],
-  eventTracking: ["Snowplow", "Amplitude"],
-  collaboration: ["Figma", "Jira", "Notion"],
+  styling: ["CSS", "TailwindCSS", "CSS-in-JS", "Responsive Design"],
+  libraries: ["Zustand", "React-query", "Three.js(Now learning)"],
+  collaboration: ["Figma to Code handoff", "Peer code reviews", "Agile/Scrum", "Git"],
 };

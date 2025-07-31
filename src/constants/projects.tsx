@@ -73,7 +73,7 @@ export const projects: Project[] = [
       "/assets/cart/cart_preview1.webp",
       "/assets/cart/cart_preview2.webp",
     ],
-    tech: ["Nextjs", "Tailwind CSS", "TypeScript", "Zustand"],
+    tech: ["Nextjs", "TailwindCSS", "TypeScript", "Zustand"],
   },
   {
     title: "Admin Website Launch",
@@ -131,7 +131,7 @@ export const projects: Project[] = [
         size: "lg",
       },
     ],
-    tech: ["Nextjs", "Styled Components", "Zustand"],
+    tech: ["Nextjs", "CSS-in-JS", "Zustand"],
   },
   {
     title: "Shared Component for Snowplow Event Tracking",
@@ -197,7 +197,7 @@ export const projects: Project[] = [
       // "/assets/angular-to-react/mileage.webp",
       // "/assets/angular-to-react/my-coupons.webp",
     ],
-    tech: ["React", "Angular", "Styled Components", "TypeScript"],
+    tech: ["React", "Angular", "CSS-in-JS", "TypeScript"],
     demo: [
       {
         type: "image",
@@ -244,7 +244,7 @@ export const projects: Project[] = [
       "Improved the existing legacy payment benefits structure to build a system that aggregates payment benefits data in real time and tracks costs. also added a monthly calendar and date-based payment graphs to support profit management.",
 
     previews: ["/assets/admin/pay_promotion_preview.webp"],
-    tech: ["React", "Styled Components", "TypeScript"],
+    tech: ["React", "CSS-in-JS", "TypeScript"],
     impacts:
       "With these changes, payment benefits data can be viewed and costs tracked instantly, and teams can monitor contribution profit day by day via the new calendar and graphs.",
     demo: [
@@ -301,6 +301,6 @@ export const projects: Project[] = [
       "/assets/brand-home/brand_home_preview1.webp",
       "/assets/brand-home/brand_home_preview2.webp",
     ],
-    tech: ["Nextjs", "Styled Components", "TypeScript"],
+    tech: ["Nextjs", "CSS-in-JS", "TypeScript"],
   },
 ];

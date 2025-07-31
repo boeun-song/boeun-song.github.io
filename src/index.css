@@ -13,6 +13,7 @@
   }
 
   body {
+    cursor: none;
     margin: 0;
     display: flex;
     place-items: center;
@@ -46,6 +47,6 @@
   }
 
   .description{
-    @apply text-[16px] text-gray-700 leading-relaxed max-w-3xl mx-auto whitespace-pre-line text-left
+    @apply text-[13px] md:text-[16px] text-gray-700 leading-relaxed max-w-3xl mx-auto whitespace-pre-line text-left
   }
 }

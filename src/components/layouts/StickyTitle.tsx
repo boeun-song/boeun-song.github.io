@@ -8,15 +8,14 @@ export const StickyTitle = ({ title }: { title: string }) => {
     offset: ["start end", "end start"],
   });
   const y = useTransform(scrollYProgress, [0, 1], [20, 0]);
-  const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
-  
+
   return (
     <motion.div
       ref={stickyRef}
-      style={{ y, opacity }}
-      className="sticky top-0 z-20 bg-white/90 backdrop-blur p-4 shadow-md rounded-3xl"
+      style={{ y }}
+      className="sticky top-0 z-20 bg-white/30 backdrop-blur p-4 shadow-md rounded-3xl"
     >
-      <h2 className="text-2xl font-bold text-center mb-6">{title}</h2>
+      <h2 className="text-l md:text-2xl font-bold text-center mb-6">{title}</h2>
     </motion.div>
   );
 };

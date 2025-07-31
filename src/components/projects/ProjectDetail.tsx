@@ -5,8 +5,8 @@ import { Row } from "./Row";
 
 export const ProjectDetail = ({ project }: { project: Project }) => {
   return (
-    <div className="text-gray-900 px-4 sm:px-8 md:px-12">
-      <h2 className="text-3xl font-bold text-gray-900 mb-9 text-center">
+    <div className="text-gray-900 md:px-12">
+      <h2 className="text-l md:text-3xl font-bold text-gray-900 mb-9 text-center">
         {project.title}
       </h2>
       <div className="space-y-10">
