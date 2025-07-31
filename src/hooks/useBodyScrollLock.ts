@@ -5,13 +5,13 @@ import {
   clearAllBodyScrollLocks,
 } from "body-scroll-lock";
 
-export const useBodyScrollLock = () => {
+export const useBodyScrollLock = (enabled = true) => {
   useEffect(() => {
     const targetElement = document.querySelector("body");
-    if (targetElement) disableBodyScroll(targetElement);
+    if (enabled && targetElement) disableBodyScroll(targetElement);
     return () => {
       if (targetElement) enableBodyScroll(targetElement);
       clearAllBodyScrollLocks();
     };
-  }, []);
+  }, [enabled]);
 };

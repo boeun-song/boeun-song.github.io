@@ -1,12 +1,15 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { type PropsWithChildren } from "react";
 import { useBodyScrollLock } from "~apps/hooks/useBodyScrollLock";
+import { useIsMobile } from "~apps/hooks/useIsMobile";
 
 interface Props {
   onClose: () => void;
 }
 export const Modal = ({ children, onClose }: PropsWithChildren<Props>) => {
-  useBodyScrollLock();
+  const { isMobile } = useIsMobile();
+
+  useBodyScrollLock(!isMobile);
 
   return (
     <AnimatePresence>

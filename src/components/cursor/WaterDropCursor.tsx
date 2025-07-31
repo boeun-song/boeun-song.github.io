@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
+import { useIsMobile } from "~apps/hooks/useIsMobile";
 
 export const WaterDropCursor: React.FC = () => {
   const [pos, setPos] = useState({ x: 0, y: 0 });
 
-  // 실시간 마우스 위치 저장
+  const { isMobile } = useIsMobile();
+
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       setPos({ x: e.clientX, y: e.clientY });
@@ -11,6 +13,10 @@ export const WaterDropCursor: React.FC = () => {
     window.addEventListener("mousemove", handleMouseMove);
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
+
+  if (isMobile) {
+    return null;
+  }
 
   return (
     <div
