@@ -16,20 +16,22 @@ export interface Project {
   demo?: DemoItem[];
   impacts?: string | ReactNode;
   description: string;
-  previews: string[];
+  preview: string;
+  date: string;
   tech: string[];
 }
 
 export const projects: Project[] = [
   {
-    title: "Cart Page",
+    title: "Renew Cart Page",
+    date: "2025",
     impacts: (
       <>
         Implemented coupon application and a “Lowest Price with Coupon” toggle
         on the cart page, greatly enhancing user convenience and purchase
         conversion rates
         <br />
-        <span className="text-blue-600 font-bold text-[13px]">
+        <span className="font-bold text-[13px]">
           Cart Visit → Cart-to-Checkout Conversion 1-day: 26.9% → 28% [+111
           bps];
           <br />
@@ -69,17 +71,17 @@ export const projects: Project[] = [
     ],
     description:
       "The cart automatically applies the most valuable coupons for selected items, allowing users to instantly see the lowest possible price",
-    previews: [
-      "/assets/cart/cart_preview1.webp",
-      "/assets/cart/cart_preview2.webp",
-    ],
+    preview: "/assets/cart/cart_preview1.webp",
     tech: ["Nextjs", "TailwindCSS", "TypeScript", "Zustand"],
   },
   {
     title: "Admin Website Launch",
+    date: "2024",
     description:
       "Developed new Admin website, implementing a product registration, a product management and a complex options & inventory management",
-    previews: ["/assets/admin/admin_diagram.webp"],
+    preview: "/assets/admin/admin_diagram.webp",
+    impacts:
+      "delivered real-time updates and handling large nested data sets; increased operational efficiency and positive user feedback from internal stakeholders and partners",
     demo: [
       {
         type: "image",
@@ -87,8 +89,8 @@ export const projects: Project[] = [
         description: (
           <div className="mt-10 flex flex-col gap-10">
             <div className="text-left">
-              <h4 className="font-bold">Option & Inventory Management</h4>
-              <p className="mt-2">
+              <h4 className="sub-title">Option & Inventory Management</h4>
+              <p className="mt-2 description">
                 A complex multi-row table lets admins select products and their
                 multiple options via synchronized checkboxes (product check =
                 all options checked). <br />
@@ -101,8 +103,8 @@ export const projects: Project[] = [
               </p>
             </div>
             <div className="text-left">
-              <h4 className="font-bold">Product Management</h4>
-              <p className="mt-2">
+              <h4 className="sub-title">Product Management</h4>
+              <p className="mt-2 description">
                 Implemented a performant table interface where admins and
                 partners can search (at least one filter required) and view
                 thousands of products.
@@ -114,10 +116,10 @@ export const projects: Project[] = [
               </p>
             </div>
             <div className="text-left">
-              <h4 className="font-bold">
+              <h4 className="sub-title">
                 Product Registration (Partial contribution)
               </h4>
-              <p className="mt-2">
+              <p className="mt-2 description">
                 Contributed UI components for brand & category selection, and
                 built reusable file upload fields for main and detail images.
                 <br />
@@ -134,18 +136,101 @@ export const projects: Project[] = [
     tech: ["Nextjs", "CSS-in-JS", "Zustand"],
   },
   {
+    title: "Pay Promotion Management - Admin",
+    date: "2024",
+    description:
+      "Improved the existing legacy payment benefits structure to build a system that aggregates payment benefits data in real time and tracks costs. also added a monthly calendar and date-based payment graphs to support profit management.",
+
+    preview: "/assets/admin/pay_promotion_preview.webp",
+    tech: ["React", "CSS-in-JS", "TypeScript"],
+    impacts:
+      "With these changes, payment benefits data can be viewed and costs tracked instantly, and teams can monitor contribution profit day by day via the new calendar and graphs.",
+    demo: [
+      {
+        type: "component",
+        component: <PayPromotionSummarySection />,
+        description: (
+          <div className="text-left">
+            <span className="text-gray-400 text-sm">* This is sample</span>
+            <p className="my-2 description">
+              Date/Calendar Chart: an interactive timeline graph that displays
+              each promotion’s start and end dates across the month, giving
+              admins an at-a-glance overview of monthly promotion status.
+              <br />
+              Searchable Table View: a responsive table to list, filter, and
+              sort all active and inactive promotions. Users can also create and
+              edit payment promotions via a form-based interface that adapts to
+              different payment types and offer configurations.
+            </p>
+          </div>
+        ),
+      },
+    ],
+  },
+
+  {
+    title: "Angular-to-React Migration",
+    date: "2024",
+    description:
+      "Migrated Angular to React with seven My Page sub-sections - Document Issuance, Membership Level, Coupons, Mileage, 1:1 Inquiries, Product Q&A, and Announcements",
+    impacts:
+      "Replacing the legacy codebase with React has dramatically simplified future feature work—team members can now extend My Page without wrestling with outdated Angular.",
+    preview: "/assets/angular-to-react/inquiry.webp",
+    tech: ["React", "Angular", "CSS-in-JS", "TypeScript"],
+    demo: [
+      {
+        type: "image",
+        src: "/assets/angular-to-react/my-coupon.webp",
+        description: "",
+        size: "sm",
+      },
+      {
+        type: "image",
+        src: "/assets/angular-to-react/mileage.webp",
+        description: "",
+        size: "sm",
+      },
+      {
+        type: "image",
+        src: "/assets/angular-to-react/inquiry.webp",
+        description: (
+          <ul className="mt-10 list-disc text-left description">
+            <li>
+              <b>Solo end-to-end delivery</b>: Without any designer or backend
+              support, I reverse-engineered the existing Angular logic,
+              documented every workflow in Notion, then re-implemented it in
+              React.
+            </li>
+            <li>
+              <b>Complex inquiry handling</b>: The 1:1 Inquiry page supports
+              multiple types (order inquiries—exchanges, returns, etc.—and
+              product questions). Also page have to display user's Order &
+              Shipping List for order inquiries. I audited each legacy case,
+              verified expected behaviors, and built robust components.
+            </li>
+            <li>
+              <b>QA & launch</b>: Led my own QA process, deployed the React
+              version, and rolled it out with zero critical issues.
+            </li>
+          </ul>
+        ),
+      },
+    ],
+  },
+  {
     title: "Shared Component for Snowplow Event Tracking",
+    date: "2024",
     description:
       "Developed a wrapper component to track product-related view and click snowplow events with a unified criteria.",
     impacts:
-      "Migrated event data from Firebase to Snowplow, set up a real-time analytics environment, and ensured data integrity to support effective decision-making",
-    previews: ["/assets/event-track/event_track_preview.webp"],
+      "enabled real-time event collection via Snowplow and improving analytics accuracy across platforms",
+    preview: "/assets/event-track/event_track_preview.webp",
     demo: [
       {
         type: "video",
         src: "/assets/event-track/event_track_demo.mp4",
         description: (
-          <ul className="mt-10 list-disc text-left">
+          <ul className="mt-10 list-disc text-left description">
             <li>
               <b>
                 Collaborated with Ios, Android Developers to created a unified
@@ -187,91 +272,8 @@ export const projects: Project[] = [
     tech: ["React", "Vite", "Snowplow"],
   },
   {
-    title: "Angular-to-React Migration",
-    description:
-      "Migrated Angular to React with seven My Page sub-sections - Document Issuance, Membership Level, Coupons, Mileage, 1:1 Inquiries, Product Q&A, and Announcements",
-    impacts:
-      "Replacing the legacy codebase with React has dramatically simplified future feature work—team members can now extend My Page without wrestling with outdated Angular.",
-    previews: [
-      "/assets/angular-to-react/inquiry.webp",
-      // "/assets/angular-to-react/mileage.webp",
-      // "/assets/angular-to-react/my-coupons.webp",
-    ],
-    tech: ["React", "Angular", "CSS-in-JS", "TypeScript"],
-    demo: [
-      {
-        type: "image",
-        src: "/assets/angular-to-react/my-coupon.webp",
-        description: "",
-        size: 'sm'
-      },
-      {
-        type: "image",
-        src: "/assets/angular-to-react/mileage.webp",
-        description: "",
-        size: 'sm'
-      },
-      {
-        type: "image",
-        src: "/assets/angular-to-react/inquiry.webp",
-        description: (
-          <ul className="mt-10 list-disc text-left">
-            <li>
-              <b>Solo end-to-end delivery</b>: Without any designer or backend
-              support, I reverse-engineered the existing Angular logic,
-              documented every workflow in Notion, then re-implemented it in
-              React.
-            </li>
-            <li>
-              <b>Complex inquiry handling</b>: The 1:1 Inquiry page supports
-              multiple types (order inquiries—exchanges, returns, etc.—and
-              product questions). Also page have to display user's Order &
-              Shipping List for order inquiries. I audited each legacy case,
-              verified expected behaviors, and built robust components.
-            </li>
-            <li>
-              <b>QA & launch</b>: Led my own QA process, deployed the React
-              version, and rolled it out with zero critical issues.
-            </li>
-          </ul>
-        ),
-      },
-    ],
-  },
-  {
-    title: "Pay Promotion Management - Admin",
-    description:
-      "Improved the existing legacy payment benefits structure to build a system that aggregates payment benefits data in real time and tracks costs. also added a monthly calendar and date-based payment graphs to support profit management.",
-
-    previews: ["/assets/admin/pay_promotion_preview.webp"],
-    tech: ["React", "CSS-in-JS", "TypeScript"],
-    impacts:
-      "With these changes, payment benefits data can be viewed and costs tracked instantly, and teams can monitor contribution profit day by day via the new calendar and graphs.",
-    demo: [
-      {
-        type: "component",
-        component: <PayPromotionSummarySection />,
-        description: (
-          <div className="text-left">
-            <span className="text-gray-400 text-sm">* This is sample</span>
-            <p className="my-2">
-              Date/Calendar Chart: an interactive timeline graph that displays
-              each promotion’s start and end dates across the month, giving
-              admins an at-a-glance overview of monthly promotion status.
-              <br />
-              Searchable Table View: a responsive table to list, filter, and
-              sort all active and inactive promotions.
-            </p>
-            Users can also create and edit payment promotions via a form-based
-            interface that adapts to different payment types and offer
-            configurations.
-          </div>
-        ),
-      },
-    ],
-  },
-  {
     title: "Brand Home",
+    date: "2023",
     demo: [
       {
         type: "video",
@@ -297,10 +299,7 @@ export const projects: Project[] = [
     ],
     description:
       "Each brand has a dedicated detail page featuring brand news, new items, and best-selling products.\nThe final layout was determined through A/B testing using Amplitude",
-    previews: [
-      "/assets/brand-home/brand_home_preview1.webp",
-      "/assets/brand-home/brand_home_preview2.webp",
-    ],
+    preview: "/assets/brand-home/brand_home_preview1.webp",
     tech: ["Nextjs", "CSS-in-JS", "TypeScript"],
   },
 ];

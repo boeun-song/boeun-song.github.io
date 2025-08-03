@@ -9,26 +9,20 @@ export const HeroSection = () => {
     loop: true,
     onLoopDone: () => setCursor(false),
   });
-  
+
   return (
     <div className="px-5 md:px-20">
-      <h3 className="animate-typewriter text-xl md:text-4xl font-semibold text-gray-600 ">
+      <h3 className="animate-typewriter text-xl md:text-4xl font-semibold text-gray-600 h-[50px]">
         {text}
         {cursor && <Cursor />}
       </h3>
 
-      <p className="text-md md:text-lg text-gray-700 text-left mt-10 leading-relaxed">
-        I’m a frontend engineer with over three years of experience building
+      <p className="text-sm md:text-lg text-color-default text-left mt-5 leading-relaxed">
+        Hi, I’m a frontend engineer with over three years of experience building
         scalable, user-centric interfaces for high-traffic and data-driven
-        applications. <br />
-        Most recently at 29CM —a leading Korean fashion commerce platform
-        serving 1.7 million monthly users— I partnered across multiple squads to
-        streamline checkout conversion, accelerate page performance, unify
-        analytics, and deliver robust admin tools.
-        <br />
-        Earlier at TestWorks -AI company, I developed front-end modules for AI-powered image
-        and video data collection and maintained the corporate website.
-        <br />
+        applications. 
+        
+        
         <br /> Known for a strong sense of ownership, I consistently deliver
         projects on time and proactively surface and resolve unexpected
         challenges.

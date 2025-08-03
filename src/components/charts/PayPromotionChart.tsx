@@ -80,7 +80,7 @@ export const PayPromotionChart = ({ data, selectedDate }: Props) => {
           return (
             <div
               key={event.promotionId}
-              className="relative min-h-[20px] mb-[18px] bg-gray-50"
+              className="relative h-4 md:h-5 mb-3 md:mb-4 bg-gray-50"
             >
               <motion.div
                 initial={{ width: 0, left: 0 }}
@@ -89,7 +89,7 @@ export const PayPromotionChart = ({ data, selectedDate }: Props) => {
                   left: `${calculateLeft(eventStart)}%`,
                 }}
                 transition={{ duration: 1 }}
-                className={`absolute flex items-center justify-center h-full text-white text-sm text-center cursor-pointer rounded-sm ${
+                className={`absolute flex items-center justify-center h-full text-white text-xs md:text-sm text-center cursor-pointer rounded-sm ${
                   event.activated ? "bg-blue-500" : "bg-gray-300"
                 }`}
               >
@@ -100,7 +100,7 @@ export const PayPromotionChart = ({ data, selectedDate }: Props) => {
         })}
       </div>
 
-      <div className="flex justify-between text-sm text-gray-600">
+      <div className="hidden md:flex justify-between text-sm text-gray-600 ">
         {getAllDaysOfMonth(year, month).map((day) => {
           const isToday =
             selectedDate.year === today.getFullYear() &&

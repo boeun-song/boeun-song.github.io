@@ -7,7 +7,7 @@ interface Props {
 export const Row = ({ subTitle, children }: PropsWithChildren<Props>) => {
   return (
     <div>
-      <h3 className="sub-title">{subTitle}</h3>
+      <h3 className="sub-title text-deep-blue mt-2">{subTitle}</h3>
       {children}
     </div>
   );

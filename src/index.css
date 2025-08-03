@@ -1,8 +1,10 @@
 @import 'tailwindcss';
 
+
 @layer base {
   :root {
-    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    --font-sans: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-family: var(--font-sans);
     line-height: 1.5;
     font-weight: 400;
     color: rgba(255, 255, 255, 0.87);
@@ -29,7 +31,6 @@
   button {
     border-radius: 3px;
     border: 1px solid #fefefe;
-    background-color: #f9f9f9;
     padding: 4px 6px;
     font-size: 12px;
     font-weight: 500;
@@ -42,11 +43,19 @@
 }
 
 @layer components {
+  .text-color-default{
+    @apply text-gray-700
+  }
+
   .sub-title {
-    @apply font-bold text-[15px] text-left text-gray-400
+    @apply font-semibold text-[15px] text-left
+  }
+
+  .text-deep-blue{
+    @apply text-[#47a299]
   }
 
   .description{
-    @apply text-[13px] md:text-[16px] text-gray-700 leading-relaxed max-w-3xl mx-auto whitespace-pre-line text-left
+    @apply text-[13px] md:text-[15px] text-gray-700 leading-relaxed max-w-3xl mx-auto whitespace-pre-line text-left
   }
 }

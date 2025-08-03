@@ -1,14 +1,14 @@
 import { others } from "~apps/constants/others";
 import { StickyTitle } from "~apps/components/layouts/StickyTitle";
 
-const titleClass = "text-md md:text-lg font-medium mb-2";
+const titleClass = "text-md md:text-lg font-medium mb-2 text-color-default";
 const paragraphClass = "text-sm md:text-md text-gray-600";
 export const OthersSection = () => {
   return (
     <section>
       <StickyTitle title="Others" />
 
-      <ul className="space-y-8 p-5 md:p-20">
+      <ul className="space-y-8 p-5 md:p-20 list-disc">
         {others.map((item) => (
           <li key={item.title}>
             <h3 className={titleClass}>{item.title}</h3>

@@ -14,7 +14,7 @@ export const Modal = ({ children, onClose }: PropsWithChildren<Props>) => {
   return (
     <AnimatePresence>
       <motion.div
-        className="fixed inset-0 bg-black/70 backdrop-blur-md flex items-center justify-center z-50 "
+        className="fixed inset-0 bg-black/70 backdrop-blur-md flex items-center justify-center z-50 cursor-auto"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -30,10 +30,10 @@ export const Modal = ({ children, onClose }: PropsWithChildren<Props>) => {
         >
           <div className="py-10 px-5 overflow-y-scroll grow">{children}</div>
 
-          <div className="px-10 py-5 flex gap-3 justify-end sticky bg-white bottom-0 shrink-0 z-10">
+          <div className="px-10 py-5 flex gap-3 justify-end sticky bottom-0 shrink-0 z-10">
             <button
               onClick={onClose}
-              className="px-4 py-2 hover:bg-gray-200 text-[16px]"
+              className="px-4 py-2 hover:bg-gray-200 text-[16px] text-deep-blue"
             >
               Close
             </button>

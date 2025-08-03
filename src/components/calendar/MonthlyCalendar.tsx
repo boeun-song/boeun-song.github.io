@@ -88,7 +88,7 @@ export const MonthlyCalendar = ({ onDateChange }: Props) => {
                     className={`text-[13px] ${
                       isSelected
                         ? "font-semibold text-blue-500"
-                        : "font-normal text-gray-700"
+                        : "font-normal text-color-default"
                     }`}
                   >
                     {month}

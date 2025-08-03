@@ -13,9 +13,9 @@ export const StickyTitle = ({ title }: { title: string }) => {
     <motion.div
       ref={stickyRef}
       style={{ y }}
-      className="sticky top-0 z-20 bg-white/30 backdrop-blur p-4 shadow-md rounded-3xl"
+      className="sticky top-0 z-20 bg-white/30 backdrop-blur p-3 md:p-4 shadow-md rounded-3xl"
     >
-      <h2 className="text-l md:text-2xl font-bold text-center mb-6">{title}</h2>
+      <h2 className="text-l md:text-xl font-semibold text-center text-color-default">{title}</h2>
     </motion.div>
   );
 };

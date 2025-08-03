@@ -147,7 +147,7 @@ export const InputBox = React.forwardRef<HTMLInputElement, Props>(
             readOnly={readOnly}
             maxLength={maxLength}
             onChange={handleChange}
-            className={`w-full outline-none border-none font-pretendard text-gray-700 ${
+            className={`w-full outline-none border-none font-pretendard text-color-default ${
               readOnly
                 ? "cursor-pointer"
                 : disabled
@@ -196,7 +196,7 @@ const createLabelElement = (node: React.ReactNode) => {
   if (!node) return null;
   if (typeof node === "string") {
     return (
-      <h3 className="mt-0 mb-[6px] text-sm font-medium leading-[22px] text-gray-700">
+      <h3 className="mt-0 mb-[6px] text-sm font-medium leading-[22px] text-color-default">
         {node}
       </h3>
     );

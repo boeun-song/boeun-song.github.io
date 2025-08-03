@@ -45,7 +45,7 @@ export const Badge = ({ label }: Props) => {
       ref={spanRef}
       onPointerOver={handlePointerOn}
       onPointerOut={handlePointerOut}
-      className="px-3 py-1 text-xs md:text-sm bg-white/40 rounded-full border border-white shadow-sm text--700"
+      className="px-3 py-1 text-[10px] md:text-sm bg-white/40 rounded-full border border-white/40 shadow-sm text-color-default"
     >
       {label}
     </span>

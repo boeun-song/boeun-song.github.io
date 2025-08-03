@@ -1,9 +1,9 @@
+import { StickyTitle } from "~apps/components/layouts/StickyTitle";
 import { Modal } from "~apps/components/modals/Modal";
-import { ProjectCard } from "~apps/components/projects/ProjectCard";
 import { ProjectDetail } from "~apps/components/projects/ProjectDetail";
 import { useSelectProject } from "~apps/components/sections/ProjectsSection.hooks";
 import { projects } from "~apps/constants/projects";
-import { StickyTitle } from "~apps/components/layouts/StickyTitle";
+import { ProjectCard } from "../projects/ProjectCard";
 
 export const ProjectsSection = () => {
   const { selected, handleSelectProject, handleUnselectProject } =
@@ -13,7 +13,7 @@ export const ProjectsSection = () => {
     <section>
       <StickyTitle title="Products" />
 
-      <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-24">
+      <div className="flex flex-col gap-8 mb-16 md:mb-24">
         {projects.map((project, index) => (
           <ProjectCard
             key={project.title}

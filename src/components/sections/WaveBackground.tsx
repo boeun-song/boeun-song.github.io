@@ -22,8 +22,8 @@ export const WaveBackground: React.FC = () => {
       u_resolution: {
         value: new THREE.Vector2(window.innerWidth, window.innerHeight),
       },
-      u_color1: { value: new THREE.Color(0xfff7f0) },
-      u_color2: { value: new THREE.Color(0xd4fff2) },
+      u_color1: { value: new THREE.Color(0xf0f8ff) },
+      u_color2: { value: new THREE.Color(0xc2e9f9) },
       u_colorSpeed: { value: 1.0 },
       u_colorFreq: { value: 4.0 },
       u_colorAmp: { value: 0.2 },

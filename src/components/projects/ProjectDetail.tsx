@@ -5,14 +5,14 @@ import { Row } from "./Row";
 
 export const ProjectDetail = ({ project }: { project: Project }) => {
   return (
-    <div className="text-gray-900 md:px-12">
-      <h2 className="text-l md:text-3xl font-bold text-gray-900 mb-9 text-center">
+    <div className="md:px-12">
+      <h3 className="text-l md:text-2xl font-semibold text-color-default mb-9 text-center">
         {project.title}
-      </h2>
+      </h3>
       <div className="space-y-10">
         <Row subTitle="Overview">
           <p className="description">{project.description}</p>
-          <div className="mt-5 flex gap-2">
+          <div className="mt-4 flex gap-2">
             {project.tech.map((stack) => (
               <Badge label={stack} key={stack} />
             ))}

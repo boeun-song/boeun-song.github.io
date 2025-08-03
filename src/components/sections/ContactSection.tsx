@@ -1,12 +1,12 @@
 import { StickyTitle } from "~apps/components/layouts/StickyTitle";
 
-const contactClass = "font-semibold text-m text-black-500 hover:text-green-900";
+const contactClass = "text-sm md:text-lg hover:font-semibold";
 
 export const ContactSection = () => {
   return (
-    <section className="pb-50 text-center">
+    <section className="pb-30 text-center">
       <StickyTitle title="Contacts" />
-      <div className="flex flex-col pt-20">
+      <div className="flex flex-col gap-3 md:gap-4 pt-10 md:pt-20">
         <a
           href="mailto:boeunsong05@gmail.com"
           className={contactClass}
